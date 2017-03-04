@@ -23,6 +23,12 @@ Now you can test the system to see if everything works:
 # try to declare an exchange if you need that - see the sample in tests.sql
 
 If you need to troubleshoot:
+# If you get NoClassDefFoundError then check if you have a correct Java target in you maven project.
+  To check what Java JDK is being used by the Oracle server. You can run the following on the database host:
+  ```
+  cd $ORACLE_HOME/jdk/bin
+  java -version
+  ```
 # the key is getting access to stdout and stderr - read the top lines in tests.sql to achieve that
 # the most common problem is security - read system.sql
 # the second most common problem is IPv6, in the latest Oracle versions a newer Java is included and it defaults to IPv6 when connecting to RabbitMQ - the code takes care at initialization of switching to IPv4, but you'll need the permission from your DBA to set this particular JVM system property, so as previously said, you'll need to get her to execute system.sql
