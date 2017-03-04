@@ -37,4 +37,23 @@
   </dependencies>
   <description>Publish RabbitMQ AMQP notifications from Oracle DB</description>
   <name>RabbitMQ procedures for Oracle DB</name>
+  <build>
+  <pluginManagement>
+    <plugins>
+      <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>2.5.1</version>
+          <configuration>
+             <source>1.5</source>
+             <target>1.5</target>
+          </configuration>
+       </plugin>
+    </plugins>
+   </pluginManagement>
+   </build>
+   <properties>
+   <maven.compiler.source>1.5</maven.compiler.source>
+   <maven.compiler.target>1.5</maven.compiler.target>
+	</properties>
 </project>
